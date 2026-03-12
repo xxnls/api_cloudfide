@@ -1,0 +1,44 @@
+<!-- seeder -->
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+
+    <changeSet id="seed-producers" author="dev">
+        <insert tableName="producers">
+            <column name="id" value="d1e7b6d0-4e5a-4e5a-8e5a-d1e7b6d04e5a"/>
+            <column name="name" value="Samsung Electronics"/>
+        </insert>
+        <insert tableName="producers">
+            <column name="id" value="f47ac10b-58cc-4372-a567-0e02b2c3d479"/>
+            <column name="name" value="Apple Inc."/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="seed-products" author="dev">
+        <insert tableName="products">
+            <column name="id" value="a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"/>
+            <column name="name" value="Galaxy S24 Ultra"/>
+            <column name="producer_id" value="d1e7b6d0-4e5a-4e5a-8e5a-d1e7b6d04e5a"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="seed-attributes" author="dev">
+        <insert tableName="product_attributes">
+            <column name="product_id" value="a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"/>
+            <column name="attr_name" value="Screen Size"/>
+            <column name="attr_value" value="6.8 inch"/>
+        </insert>
+        <insert tableName="product_attributes">
+            <column name="product_id" value="a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"/>
+            <column name="attr_name" value="RAM"/>
+            <column name="attr_value" value="12GB"/>
+        </insert>
+        <insert tableName="product_attributes">
+            <column name="product_id" value="a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"/>
+            <column name="attr_name" value="Battery"/>
+            <column name="attr_value" value="5000mAh"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

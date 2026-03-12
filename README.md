@@ -13,3 +13,4 @@ H2 Console
 - http://localhost:8080/h2
 - JDBC URL: jdbc:h2:mem:apidb
 - Login: sa
+- The database is automatically seeded with some sample records.
